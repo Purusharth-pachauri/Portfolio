@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Practice - Interactive Learning</title>
+    <!-- Modern premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <div class="logo-circle"></div>
+                <h2>WebPractice</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#notes-section" class="nav-link active">
+                    <span class="icon">📓</span> Course Notes
+                </a>
+                <a href="#html-section" class="nav-link">
+                    <span class="icon">📄</span> HTML Structure
+                </a>
+                <a href="#css-section" class="nav-link">
+                    <span class="icon">🎨</span> CSS Styling
+                </a>
+                <a href="#js-section" class="nav-link">
+                    <span class="icon">⚡</span> JavaScript Logic
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <header class="top-bar glass-panel">
+                <h1>Fundamentals of Web Development</h1>
+                <p>An interactive, premium guide based on core web concepts.</p>
+            </header>
+
+            <div class="sections-container">
+                <!-- NOTES SECTION -->
+                <section id="notes-section" class="learning-section active-section fade-in">
+                    <div class="section-header">
+                        <h2>Course Notes</h2>
+                        <span class="badge" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #cbd5e1;">Study Guide</span>
+                    </div>
+                    
+                    <div class="card-grid">
+                        <div class="concept-card glass-panel flex-span">
+                            <h3>1. HTML (HyperText Markup Language)</h3>
+                            <ul>
+                                <li style="margin-bottom: 8px;"><strong>Semantic Tags:</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> give meaning for Accessibility and SEO.</li>
+                                <li style="margin-bottom: 8px;"><strong>Typography:</strong> <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;blockquote&gt;</code>.</li>
+                                <li style="margin-bottom: 8px;"><strong>Lists:</strong> <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>.</li>
+                                <li style="margin-bottom: 8px;"><strong>Images & Tables:</strong> <code>&lt;img&gt;</code> with crucial <code>alt</code> attribute. Tables organize data cleanly.</li>
+                                <li><strong>Forms & Inputs:</strong> Forms collect user input efficiently with labels and inputs.</li>
+                            </ul>
+                        </div>
+                        <div class="concept-card glass-panel flex-span">
+                            <h3>2. CSS (Cascading Style Sheets)</h3>
+                            <ul>
+                                <li style="margin-bottom: 8px;"><strong>Variables:</strong> Custom properties defined in <code>:root</code> for reusable styling.</li>
+                                <li style="margin-bottom: 8px;"><strong>The Box Model:</strong> Content, Padding, Border, Margin. <code>box-sizing: border-box</code> is essential.</li>
+                                <li style="margin-bottom: 8px;"><strong>Layouts:</strong> Flexbox for 1D (rows/cols), Grid for 2D complex layouts.</li>
+                                <li style="margin-bottom: 8px;"><strong>Pseudo-Classes:</strong> Styling states like <code>:hover</code> or <code>:focus</code>.</li>
+                                <li><strong>Media Queries:</strong> For responsive design across different screen sizes (mobile friendliness).</li>
+                            </ul>
+                        </div>
+                        <div class="concept-card glass-panel flex-span">
+                            <h3>3. JavaScript</h3>
+                            <ul>
+                                <li style="margin-bottom: 8px;"><strong>Variables & Types:</strong> <code>const</code>, <code>let</code>, String, Number, Array, Object.</li>
+                                <li style="margin-bottom: 8px;"><strong>DOM Manipulation:</strong> Use <code>getElementById</code> or <code>querySelector</code> to read and change HTML elements dynamically.</li>
+                                <li style="margin-bottom: 8px;"><strong>Functions:</strong> Reusable code blocks (standard and arrow functions).</li>
+                                <li style="margin-bottom: 8px;"><strong>Event Listeners:</strong> Responding to user actions like 'click' and form 'submit'. Calls <code>preventDefault()</code> to stop reloads.</li>
+                                <li><strong>Asynchronous JS:</strong> Using <code>setTimeout()</code> for delays and fetching external data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HTML SECTION -->
+                <section id="html-section" class="learning-section fade-in" style="display: none;">
+                    <div class="section-header">
+                        <h2>HTML: The Skeleton</h2>
+                        <span class="badge html-badge">HyperText Markup Language</span>
+                    </div>
+                    
+                    <div class="card-grid">
+                        <div class="concept-card glass-panel">
+                            <h3>Semantic Structure</h3>
+                            <p>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;article&gt;</code> give meaning to your layout, improving SEO and accessibility.</p>
+                        </div>
+                        <div class="concept-card glass-panel">
+                            <h3>Typography & Lists</h3>
+                            <p>Use <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> for headings and <code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code> for lists.</p>
+                            <ul class="demo-list">
+                                <li><strong>Strong tag</strong> for bold</li>
+                                <li><em>Em tag</em> for italics</li>
+                            </ul>
+                        </div>
+                        <div class="concept-card glass-panel flex-span">
+                            <h3>HTML Tables & Forms</h3>
+                            <p>Tables organize tabular data, while forms collect user input efficiently.</p>
+                            <form class="demo-form" onsubmit="event.preventDefault();">
+                                <input type="text" placeholder="Example Input" class="demo-input">
+                                <button class="btn btn-primary">Demo Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CSS SECTION -->
+                <section id="css-section" class="learning-section fade-in" style="display: none;">
+                    <div class="section-header">
+                        <h2>CSS: The Styling</h2>
+                        <span class="badge css-badge">Cascading Style Sheets</span>
+                    </div>
+                    
+                    <div class="card-grid">
+                        <div class="concept-card glass-panel">
+                            <h3>The Box Model</h3>
+                            <p>Every element is a box containing <strong>margins</strong> (outside), <strong>borders</strong>, <strong>padding</strong> (inside), and the actual <strong>content</strong>.</p>
+                            <div class="box-model-demo">
+                                <div class="margin-box">Margin
+                                    <div class="border-box">Border
+                                        <div class="padding-box">Padding
+                                            <div class="content-box">Content</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="concept-card glass-panel">
+                            <h3>Flexbox & Grid</h3>
+                            <p>Modern layouts are built using <code>display: flex</code> for 1-dimensional layouts (rows/columns) and <code>display: grid</code> for 2-dimensional complex layouts.</p>
+                            <div class="flex-demo">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- JS SECTION -->
+                <section id="js-section" class="learning-section fade-in" style="display: none;">
+                    <div class="section-header">
+                        <h2>JavaScript: The Interaction</h2>
+                        <span class="badge js-badge">EcmaScript</span>
+                    </div>
+                    
+                    <div class="card-grid">
+                        <div class="concept-card glass-panel flex-span">
+                            <h3>DOM Manipulation & Events</h3>
+                            <p>JavaScript allows us to select HTML elements, change their CSS, and listen for events like clicks and keyboard presses.</p>
+                            
+                            <div class="interactive-playground">
+                                <h4>Interactive Form Playground</h4>
+                                <form id="practice-form" class="practice-form">
+                                    <div class="input-group">
+                                        <label for="dev-name">Developer Name</label>
+                                        <input type="text" id="dev-name" required placeholder="Enter your name">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="dev-skill">Skill Level</label>
+                                        <select id="dev-skill">
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" id="js-action-btn" class="btn btn-primary pulse-hover">Run JavaScript Code</button>
+                                </form>
+                                
+                                <div id="js-console" class="mock-console">
+                                    <div class="console-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="console-title">Console Output</span>
+                                    </div>
+                                    <div class="console-body" id="console-output">
+                                        > Ready for input...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
