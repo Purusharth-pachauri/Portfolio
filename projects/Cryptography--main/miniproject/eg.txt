@@ -1,0 +1,14 @@
+A database management system (DBMS) is a software program that allows users to create, manage, and access data in a database. It acts as an interface between the database and the users, enabling them to:
+Retrieve data
+Update data
+Organize and optimize data
+Perform administrative tasks like performance monitoring, tuning, backup, and recovery 
+Here are some other features of a DBMS:
+Data integrity
+DBMSs enforce policies to ensure the accuracy and consistency of data. For example, they can ensure that the correct data types are stored in each column. 
+Centralized tools
+DBMSs offer centralized tools to make backup and recovery more convenient. These tools can include automated snapshots, backup scheduling, and backup verifications. 
+Database languages
+DBMSs use special programming languages to define and manipulate databases. Some examples of database languages include DDL, DML, DCL, and TCL. 
+Some popular DBMSs include:
+MySQL, Microsoft Access, Microsoft SQL Server, FileMaker Pro, Oracle Database, and dBASE. 

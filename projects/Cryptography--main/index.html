@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Vault v2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">SecVault<span>_AES</span></div>
+            <p>100% Client-Side WebCrypto File Encryption</p>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" id="tab-encrypt">🗝️ Encrypt File</div>
+            <div class="tab" id="tab-decrypt">🔓 Decrypt File</div>
+        </div>
+
+        <!-- ENCRYPT SECTION -->
+        <main id="encrypt-section" class="section-card active-section">
+            <h2>Lock your file seamlessly</h2>
+            <p class="subtitle">Your file will be encrypted using military-grade AES-GCM 256-bit encryption entirely within your browser. <strong>Your files never leave your computer.</strong></p>
+            
+            <form id="encrypt-form">
+                <div class="file-drop-area" id="encrypt-drop">
+                    <span class="icon">📁</span>
+                    <p>Drag & Drop a file here or</p>
+                    <input type="file" id="file-to-encrypt" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" id="encrypt-btn">Encrypt & Download</button>
+            </form>
+
+            <div class="status-msg" id="encrypt-status"></div>
+        </main>
+
+        <!-- DECRYPT SECTION -->
+        <main id="decrypt-section" class="section-card">
+            <h2>Restore your file safely</h2>
+            <p class="subtitle">Provide your previously encrypted file (`.enc`) and the `Secret.key` file that was generated during the encryption process.</p>
+            
+            <form id="decrypt-form">
+                <div class="file-drop-area" id="decrypt-drop">
+                    <span class="icon">🔒</span>
+                    <p>Select Encrypted File (.enc)</p>
+                    <input type="file" id="file-to-decrypt" required>
+                </div>
+
+                <div class="file-drop-area" id="key-drop" style="margin-top: 1rem; border-color: rgba(34, 197, 94, 0.3);">
+                    <span class="icon">🔑</span>
+                    <p>Select Secret.key File</p>
+                    <input type="file" id="secret-key-file" required>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary" id="decrypt-btn">Decrypt & Download</button>
+            </form>
+
+            <div class="status-msg" id="decrypt-status"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

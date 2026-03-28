@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSETC Student Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="rbs.jpg" alt="Logo" width="40" height="40">
+                RBSETC
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="details.html" target="mainFrame" class="active">🏠 Dashboard Home</a></li>
+                    <li><a href="sem1.html" target="mainFrame">📘 1st Semester</a></li>
+                    <li><a href="sem2.html" target="mainFrame">📗 2nd Semester</a></li>
+                    <li><a href="sem3.html" target="mainFrame">📙 3rd Semester</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="login.html" target="mainFrame" class="btn btn-outline">Student Login</a>
+                <a href="login.html" target="mainFrame" class="btn btn-outline">Staff Login</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <header class="top-header">
+                Department of Computer Science and Engineering
+            </header>
+            
+            <div class="iframe-container">
+                <iframe src="details.html" name="mainFrame" title="Main Content Area"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <!-- Active Link Script -->
+    <script>
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

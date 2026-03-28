@@ -1,0 +1,208 @@
+:root {
+    --bg-base: #020617;
+    --accent: #0ea5e9;
+    --accent-glow: rgba(14, 165, 233, 0.5);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --alert-red: #ef4444;
+    --alert-green: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.bg-layer {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.15), transparent 40%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.1), transparent 40%);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+header p {
+    color: var(--text-muted);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.textarea-container textarea {
+    width: 100%;
+    height: 180px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: var(--text-main);
+    font-family: monospace;
+    font-size: 0.85rem;
+    resize: none;
+}
+
+.textarea-container textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.status-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#result-label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#result-confidence {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Result states */
+.result-display.attack {
+    border-color: rgba(239, 68, 68, 0.5);
+    background: rgba(239, 68, 68, 0.1);
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.2);
+}
+
+.result-display.attack #result-label {
+    color: var(--alert-red);
+}
+
+.result-display.normal {
+    border-color: rgba(34, 197, 94, 0.5);
+    background: rgba(34, 197, 94, 0.1);
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+}
+
+.result-display.normal #result-label {
+    color: var(--alert-green);
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
